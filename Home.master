@@ -1,0 +1,74 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Home.master.cs" Inherits="Home" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>French Courier Service</title>
+
+<style type="text/css">
+<!--
+.tablebg
+{
+background:url(images/bg.gif) repeat-x 0 0;
+border:#222222 solid 1px;
+}
+.innertable
+{
+border:#5998C9 solid 2px;
+}
+-->
+</style>
+</head>
+
+<body bgcolor="#E4F4FB">
+<form runat ="server">
+<table width="800" align="center" cellpadding="0" cellspacing="0" background="" class="tablebg">
+  <tr>
+    <td colspan="2" bgcolor="#FFFFFF" style="width: 700px; height: 60px;"><img src="images/logo.gif" width="440" height="60" /></td>
+  </tr>
+  <tr>
+    <td colspan="2" style="width: 700px; height: 70px;"><table align="center" cellpadding="0" cellspacing="0" style="height: 1px; width: 798px;">
+      <tr>
+        <td background="images/menu_mid.gif" style="height: 50px"><%--<img src="images/menu_l.gif" />--%></td>
+        <td background="images/menu_mid.gif" style="height: 50px; width: 752px;" >&nbsp;<asp:Menu ID="Menu1" runat="server" Font-Bold="True" ForeColor="#99FFFF" Orientation="Horizontal"
+                Width="742px" Height="26px">
+                <Items>
+                    <asp:MenuItem Text="HOME" Value="Home" NavigateUrl="~/Home.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="ADMIN" Value="ADMIN" NavigateUrl="~/admin/adminlogin.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="COURIER" Value="New Item" NavigateUrl="~/courier/login.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="EMPLOYEE" Value="New Item" NavigateUrl="~/employee/emplogin.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="CUSTOMER" Value="New Item" NavigateUrl="~/customer/login.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="ABOUT US" Value="ABOUT US" NavigateUrl="~/Aboutus.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="CONTACT US" Value="CONTACT US" NavigateUrl="~/contactus.aspx"></asp:MenuItem>
+                </Items>
+            </asp:Menu>
+        </td>
+        <td  background="images/menu_r.gif" style="width: 11px; height: 64px;"><%--<img src="images/menu_r.gif" style="width: 20px; height: 60px" />--%></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center" valign="middle" style="width: 798px"><h4 class="style1"><img src="images/banner.gif" width="774" height="200" /></h4></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center" valign="middle" style="width: 798px; height: 343px;"><table width="774" align="center" cellpadding="0" cellspacing="0" class="innertable">
+      <tr>
+        <td height="320" bgcolor="#FFFFFF" align="left">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </td>
+        </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td style="height: 10px"></td>
+  </tr>
+  <tr>
+    <td height="49" background="images/footer.gif"></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>
